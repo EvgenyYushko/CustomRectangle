@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>HW_4_1</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <p>Current width: 500px</p>
+            <p>Current height: 500px</p>
+        </div>
+    </div>
+    <script>
+        setSizeBlock();
+
+        function setSizeBlock(){
+            let outerEl = document.getElementsByClassName('outer')[0];
+            let innerEl = document.getElementsByClassName('inner')[0];
+
+            setTimeout(() => {
+                let width = parseInt(prompt('input new width'));
+                let height = parseInt(prompt('input new height'));
+
+                let widthDisplay = width + 'px';
+                let heightDisplay = height + 'px';
+
+                outerEl.style.width = widthDisplay;
+                outerEl.style.height = heightDisplay;
+
+                innerEl.innerHTML = '';
+
+                let pWidth = document.createElement('p');
+                pWidth.innerHTML = 'Current width: ' + widthDisplay;
+
+                let pHeigth = document.createElement('p');
+                pHeigth.innerHTML = 'Current height: ' + heightDisplay;
+
+                innerEl.append(pWidth);
+                innerEl.append(pHeigth);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

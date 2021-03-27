@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.outer{
+    background-color: rgb(165, 42, 42);
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+p:last-child{
+    margin-bottom: 0px;
+}
